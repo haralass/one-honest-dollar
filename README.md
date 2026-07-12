@@ -15,11 +15,11 @@ To activate it:
 
 If the code `onehonestdollar` is taken, pick another and update the `data-goatcounter` URL at the bottom of `index.html`.
 
-### 2. Email capture (actually collect the signups)
-The form currently only does `console.log` (see the `TODO` in `index.html`).
-Easiest free options:
-- **Formspree** (https://formspree.io): create a form, set the form's `action` to the endpoint they give you, add `method="POST"` — done.
-- **Buttondown** or **MailerLite** free tier if you want the launch email handled by the same tool.
+### 2. Email capture — DONE, one click left
+The form now submits via **FormSubmit** (free, no account) to haralas@icloud.com.
+The very first submission triggers a one-time **activation email** to that inbox —
+click the link in it once, and every signup after that arrives as an email
+(subject: "One Honest Dollar — waitlist signup"). Until you click it, submissions are held.
 
 ## Credits
 - 3D robot: [RobotExpressive](https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf/RobotExpressive) by Tomás Laulhé, CC0/MIT via three.js examples.
