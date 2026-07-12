@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZeroToOne — get from zero to your first dollar online</title>
+<title>One Honest Dollar — get from zero to your first dollar online</title>
 <meta name="description" content="Not a course. Not a get-rich scheme. A specific, small, achievable first step to your first dollar online — validated before you build anything.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -268,6 +268,142 @@
     font-size: 0.87rem;
     margin-top: 32px;
   }
+
+  /* ---------- The path ---------- */
+  .path {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .path-step {
+    position: relative;
+    display: flex;
+    gap: 22px;
+    padding: 0 0 36px 0;
+  }
+  .path-step:last-child { padding-bottom: 0; }
+  .path-step::before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    top: 46px;
+    bottom: 2px;
+    width: 2px;
+    background: linear-gradient(180deg, #A7F3D0, #E9ECF1);
+  }
+  .path-step:last-child::before { display: none; }
+  .path-num {
+    flex: none;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid #A7F3D0;
+    color: var(--green-deep);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .path-step:last-child .path-num {
+    background: var(--green-deep);
+    border-color: var(--green-deep);
+    color: #fff;
+  }
+  .path-step h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 9px 0 4px;
+  }
+  .path-step p {
+    color: var(--ink-soft);
+    font-size: 0.94rem;
+    max-width: 520px;
+  }
+
+  /* ---------- Guide preview ---------- */
+  .preview-section { padding-top: 0; }
+  .preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .book {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    aspect-ratio: 3 / 4;
+  }
+  .book .page {
+    position: absolute;
+    inset: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+  }
+  .book .page.p2 { transform: rotate(-3deg) translate(-8px, 6px); opacity: .55; }
+  .book .page.p3 { transform: rotate(3deg) translate(10px, 10px); opacity: .35; }
+  .book .page.front {
+    padding: 26px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .book .front .book-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-deep);
+  }
+  .book .front h4 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  .book .front .toc {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .book .front .toc span {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+  }
+  .book .front .toc b {
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: #94A3B8;
+  }
+  .book .front .toc .soon { color: #A3AEBE; font-style: italic; }
+  .preview-copy h2 {
+    font-size: clamp(1.5rem, 3.4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+  }
+  .preview-copy p {
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+    margin-bottom: 12px;
+  }
+  .preview-copy .fine { font-size: 0.85rem; color: var(--ink-faint); }
 
   /* ---------- What's inside ---------- */
   .inside {
@@ -546,6 +682,9 @@
     .scene-fallback { font-size: 4.2rem; }
     .quotes { grid-template-columns: 1fr; }
     .inside { grid-template-columns: 1fr; }
+    .preview-grid { grid-template-columns: 1fr; gap: 36px; }
+    .preview-copy { text-align: center; }
+    .book { max-width: 270px; }
     .cta-card { padding: 42px 24px 38px; }
     .signup { flex-direction: column; }
     .signup button { width: 100%; padding: 15px 28px; }
@@ -557,13 +696,13 @@
 
 <header>
   <div class="wrap">
-    <a class="wordmark" href="#" aria-label="ZeroToOne home">
+    <a class="wordmark" href="#" aria-label="One Honest Dollar home">
       <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <rect width="32" height="32" rx="9" fill="#10B981"/>
         <circle cx="12.5" cy="16" r="5.6" stroke="#FFFFFF" stroke-width="3" fill="none" opacity=".9"/>
         <rect x="21.5" y="8.5" width="3.4" height="15" rx="1.7" fill="#FFFFFF"/>
       </svg>
-      <span>ZeroTo<em>One</em></span>
+      <span>One <em>Honest</em> Dollar</span>
     </a>
     <a class="header-cta" href="#cta-h">Notify me</a>
   </div>
@@ -574,8 +713,8 @@
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap">
       <span class="badge"><span class="pulse" aria-hidden="true"></span>In progress &mdash; built in public</span>
-      <h1 id="hero-h">Get from <span class="accent">zero</span> to your first dollar online</h1>
-      <p class="sub">Not a course. Not a get-rich scheme. A short, specific playbook for getting your first real sale &mdash; validated before you build anything.</p>
+      <h1 id="hero-h">Get from <span class="accent">zero</span> to one honest dollar</h1>
+      <p class="sub">Not a course. Not a get-rich scheme. A short, specific playbook for getting your first real sale online &mdash; validated before you build anything.</p>
 
       <div class="scene-card" id="scene-card" role="img" aria-label="Animated 3D illustration: a friendly robot watching a green numeral flip between zero and one, giving a thumbs up when it lands on one.">
         <div class="scene-fallback" aria-hidden="true">
@@ -609,6 +748,47 @@
         </div>
       </div>
       <p class="quotes-caption" data-aos="fade-up">These aren't made up. This is what people actually say when they're stuck. If it's you too, you're exactly who this is for.</p>
+    </div>
+  </section>
+
+  <!-- The path -->
+  <section aria-labelledby="path-h">
+    <div class="wrap">
+      <div class="section-head" data-aos="fade-up">
+        <span class="eyebrow">How it works</span>
+        <h2 class="section-h" id="path-h">The path, in plain terms</h2>
+        <p class="section-sub">No secrets, no loopholes. A sequence you can actually follow.</p>
+      </div>
+      <div class="path">
+        <div class="path-step" data-aos="fade-up">
+          <span class="path-num">01</span>
+          <div>
+            <h3>Pick one thing</h3>
+            <p>One offer you can deliver this week &mdash; chosen with a simple test, not a guess. No building yet.</p>
+          </div>
+        </div>
+        <div class="path-step" data-aos="fade-up">
+          <span class="path-num">02</span>
+          <div>
+            <h3>Find ten real people</h3>
+            <p>Go where your buyers already complain. Ask about their problem, not your idea &mdash; people lie to be polite.</p>
+          </div>
+        </div>
+        <div class="path-step" data-aos="fade-up">
+          <span class="path-num">03</span>
+          <div>
+            <h3>Make a tiny ask</h3>
+            <p>A small offer at a small price, before anything is built. If nobody bites, you just saved yourself months.</p>
+          </div>
+        </div>
+        <div class="path-step" data-aos="fade-up">
+          <span class="path-num">04</span>
+          <div>
+            <h3>One honest dollar</h3>
+            <p>A stranger pays you. Screenshot it. That's the proof &mdash; and everything after it gets easier.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -656,6 +836,40 @@
             <h3>One more thing</h3>
             <p>Still being finalized. We'd rather leave this blank than pad it out.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guide preview -->
+  <section class="preview-section" aria-labelledby="preview-h">
+    <div class="wrap">
+      <div class="preview-grid">
+        <div class="book" data-aos="fade-up" aria-hidden="true">
+          <div class="page p3"></div>
+          <div class="page p2"></div>
+          <div class="page front">
+            <span class="book-brand">
+              <svg width="14" height="14" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="9" fill="#10B981"/><circle cx="12.5" cy="16" r="5.6" stroke="#FFFFFF" stroke-width="3" fill="none" opacity=".9"/><rect x="21.5" y="8.5" width="3.4" height="15" rx="1.7" fill="#FFFFFF"/></svg>
+              One Honest Dollar
+            </span>
+            <h4>From zero to your first real sale</h4>
+            <div class="toc">
+              <span><b>01</b> The test that saves you months</span>
+              <span><b>02</b> Why your last 10 tries paid nothing</span>
+              <span><b>03</b> Finding ten real buyers</span>
+              <span><b>04</b> The tiny ask</span>
+              <span><b>05</b> The day of the first dollar</span>
+              <span class="soon"><b>+</b> worksheets &mdash; being finalized</span>
+            </div>
+          </div>
+        </div>
+        <div class="preview-copy" data-aos="fade-up">
+          <span class="eyebrow">What you're buying</span>
+          <h2 id="preview-h">Short. Specific. Finished in an evening.</h2>
+          <p>This is the working table of contents &mdash; shown before launch on purpose, so you can judge it before spending anything.</p>
+          <p>Every chapter ends in an action you can do the same day, and none of them requires an audience, a budget, or prior wins.</p>
+          <p class="fine">Contents may shift slightly before launch &mdash; it's being written in public. What won't shift: the goal stays one real sale, not vague motivation.</p>
         </div>
       </div>
     </div>
@@ -742,9 +956,9 @@
         <circle cx="12.5" cy="16" r="5.6" stroke="#FFFFFF" stroke-width="3" fill="none" opacity=".9"/>
         <rect x="21.5" y="8.5" width="3.4" height="15" rx="1.7" fill="#FFFFFF"/>
       </svg>
-      <span>ZeroTo<em>One</em></span>
+      <span>One <em>Honest</em> Dollar</span>
     </span>
-    <span class="copy">&copy; 2026 ZeroToOne</span>
+    <span class="copy">&copy; 2026 One Honest Dollar</span>
   </div>
 </footer>
 
@@ -1013,7 +1227,7 @@
      ACTIVATION: sign up at https://www.goatcounter.com with the code "zerotoone";
      stats will then appear at https://zerotoone.goatcounter.com.
      Until the account exists this script does nothing. -->
-<script data-goatcounter="https://zerotoone.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://onehonestdollar.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
 </body>
 </html>

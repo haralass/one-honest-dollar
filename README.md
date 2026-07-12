@@ -1,7 +1,7 @@
-# ZeroToOne — presell landing page
+# One Honest Dollar — presell landing page
 
 Waitlist/presell test page for a €17 digital product ("get from zero to your first dollar online").
-Live at **https://haralass.github.io/zerotoone/**.
+Live at **https://haralass.github.io/one-honest-dollar/**.
 
 Single static page: `index.html` + `assets/robot.glb`. No build step.
 
@@ -10,10 +10,10 @@ Single static page: `index.html` + `assets/robot.glb`. No build step.
 ### 1. Visitor analytics (see how many people visited)
 The page already includes the [GoatCounter](https://www.goatcounter.com) script (free, no cookies, GDPR-friendly).
 To activate it:
-1. Sign up at https://www.goatcounter.com/signup with the site code **`zerotoone`**.
-2. Done — stats appear at https://zerotoone.goatcounter.com (visits, referrers, countries, devices).
+1. Sign up at https://www.goatcounter.com/signup with the site code **`onehonestdollar`**.
+2. Done — stats appear at https://onehonestdollar.goatcounter.com (visits, referrers, countries, devices).
 
-If the code `zerotoone` is taken, pick another and update the `data-goatcounter` URL at the bottom of `index.html`.
+If the code `onehonestdollar` is taken, pick another and update the `data-goatcounter` URL at the bottom of `index.html`.
 
 ### 2. Email capture (actually collect the signups)
 The form currently only does `console.log` (see the `TODO` in `index.html`).
