@@ -16,7 +16,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+  /* Scroll reveal. Content is visible by default and JS opts in to hiding it,
+     so a blocked CDN, a script error or a dead observer can never leave the
+     page blank. Only .reveal-on elements are ever hidden, and only once the
+     observer that reveals them is known to be running. */
+  .reveal-on [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .6s cubic-bezier(.22,.61,.36,1), transform .6s cubic-bezier(.22,.61,.36,1);
+    will-change: opacity, transform;
+  }
+  .reveal-on [data-reveal].revealed { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-on [data-reveal] { opacity: 1; transform: none; transition: none; }
+  }
+</style>
 <style>
   :root {
     --bg: #FAFAFA;
@@ -787,56 +802,56 @@
   <!-- Sound familiar -->
   <section id="familiar" aria-labelledby="familiar-h">
     <div class="wrap">
-      <div class="section-head" data-aos="fade-up">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">The problem</span>
         <h2 class="section-h" id="familiar-h">Sound familiar?</h2>
       </div>
       <div class="quotes">
-        <div class="quote-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="quote-card" data-reveal data-reveal-delay="0">
           <blockquote>I've tested like 10 different things. Most paid basically nothing or took forever to see results.</blockquote>
         </div>
-        <div class="quote-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="quote-card" data-reveal data-reveal-delay="100">
           <blockquote>I don't know how to start or any method to make money online.</blockquote>
         </div>
-        <div class="quote-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="quote-card" data-reveal data-reveal-delay="200">
           <blockquote>Getting from 0 to 1 sale is what matters most &mdash; I just want to clear that psychological hurdle of making my very first dollar.</blockquote>
         </div>
       </div>
-      <p class="quotes-caption" data-aos="fade-up">These aren't made up. They're the exact words of people who were stuck where you are. If this is you too, you're exactly who this is for.</p>
+      <p class="quotes-caption" data-reveal>These aren't made up. They're the exact words of people who were stuck where you are. If this is you too, you're exactly who this is for.</p>
     </div>
   </section>
 
   <!-- The path -->
   <section aria-labelledby="path-h">
     <div class="wrap">
-      <div class="section-head" data-aos="fade-up">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">How it works</span>
         <h2 class="section-h" id="path-h">The path, in plain terms</h2>
         <p class="section-sub">No secrets, no loopholes. A sequence you can actually follow.</p>
       </div>
       <div class="path">
-        <div class="path-step" data-aos="fade-up">
+        <div class="path-step" data-reveal>
           <span class="path-num">01</span>
           <div>
             <h3>Pick one thing</h3>
             <p>One offer you can deliver this week &mdash; chosen with a simple test, not a guess. No building yet.</p>
           </div>
         </div>
-        <div class="path-step" data-aos="fade-up">
+        <div class="path-step" data-reveal>
           <span class="path-num">02</span>
           <div>
             <h3>Find ten real people</h3>
             <p>Go where your buyers already complain. Ask about their problem, not your idea &mdash; people lie to be polite.</p>
           </div>
         </div>
-        <div class="path-step" data-aos="fade-up">
+        <div class="path-step" data-reveal>
           <span class="path-num">03</span>
           <div>
             <h3>Make a tiny ask</h3>
             <p>A small offer at a small price, before anything is built. If nobody bites, you just saved yourself months.</p>
           </div>
         </div>
-        <div class="path-step" data-aos="fade-up">
+        <div class="path-step" data-reveal>
           <span class="path-num">04</span>
           <div>
             <h3>One honest dollar</h3>
@@ -850,13 +865,13 @@
   <!-- What's inside -->
   <section aria-labelledby="inside-h">
     <div class="wrap">
-      <div class="section-head" data-aos="fade-up">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">The plan</span>
         <h2 class="section-h" id="inside-h">What's inside</h2>
         <p class="section-sub">No filler. No mindset fluff. Only the moves that end at one real sale.</p>
       </div>
       <div class="inside">
-        <div class="inside-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="inside-item" data-reveal data-reveal-delay="0">
           <span class="icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           </span>
@@ -865,7 +880,7 @@
             <p>How to test whether anyone wants your idea before you spend weeks making it.</p>
           </div>
         </div>
-        <div class="inside-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="inside-item" data-reveal data-reveal-delay="100">
           <span class="icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
           </span>
@@ -874,7 +889,7 @@
             <p>Why hopping between methods keeps you at zero, and how to pick one thing and see it through.</p>
           </div>
         </div>
-        <div class="inside-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="inside-item" data-reveal data-reveal-delay="0">
           <span class="icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M4 20v-4h4v4"/><path d="M10 20v-8h4v8"/><path d="M16 20V6h4v14"/></svg>
           </span>
@@ -883,7 +898,7 @@
             <p>Step by step, from nothing to one real transaction. Not a promise of riches &mdash; one sale.</p>
           </div>
         </div>
-        <div class="inside-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="inside-item" data-reveal data-reveal-delay="100">
           <span class="icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </span>
@@ -900,7 +915,7 @@
   <section class="preview-section" id="sample" aria-labelledby="preview-h">
     <div class="wrap">
       <div class="preview-grid">
-        <div class="book" data-aos="fade-up" aria-hidden="true">
+        <div class="book" data-reveal aria-hidden="true">
           <div class="page p3"></div>
           <div class="page p2"></div>
           <div class="page front">
@@ -921,7 +936,7 @@
             </div>
           </div>
         </div>
-        <div class="preview-copy" data-aos="fade-up">
+        <div class="preview-copy" data-reveal>
           <span class="eyebrow">Look inside</span>
           <h2 id="preview-h">See exactly what you're getting.</h2>
           <p>The whole table of contents is right here &mdash; no mystery, no "secret system." Seven short chapters and the worksheets that turn them into a sent message and a filled page.</p>
@@ -935,7 +950,7 @@
   <!-- Founder note -->
   <section class="note-section" aria-label="A note from the builder">
     <div class="wrap">
-      <div class="note-card" data-aos="fade-up">
+      <div class="note-card" data-reveal>
         <span class="note-label">Why this exists</span>
         <p>I've been on the buying side of too many "make money online" products. Big promises up front, recycled advice inside, and you end up exactly where you started &mdash; minus the price of the course.</p>
         <p>So I went and read the real stories &mdash; hundreds of people who stayed at zero, and hundreds who finally made that first sale &mdash; to find what actually separates them.</p>
@@ -947,7 +962,7 @@
   <!-- Price + CTA -->
   <section class="cta-section" aria-labelledby="cta-h">
     <div class="wrap">
-      <div class="cta-card" data-aos="fade-up">
+      <div class="cta-card" data-reveal>
         <span class="price-tag"><span class="amount">&euro;17</span><span class="note">one-time &middot; instant download</span></span>
         <h2 id="cta-h">Get One Honest Dollar</h2>
         <p class="cta-sub">The whole method: seven short chapters and the worksheets that turn them into sent messages &mdash; and a first sale.</p>
@@ -970,11 +985,11 @@
   <!-- FAQ -->
   <section class="faq-section" aria-labelledby="faq-h">
     <div class="wrap">
-      <div class="section-head" data-aos="fade-up">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">Fair questions</span>
         <h2 class="section-h" id="faq-h">You should be skeptical</h2>
       </div>
-      <div class="faq" data-aos="fade-up">
+      <div class="faq" data-reveal>
         <details>
           <summary>Is this just another course?
             <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
@@ -1286,16 +1301,69 @@
   }
 </script>
 
-<!-- Scroll-reveal animations (AOS). Disabled for prefers-reduced-motion. -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- Scroll reveal. Replaces AOS, which hid every section behind opacity:0 via its
+     stylesheet and then never revealed them, leaving the page blank below the hero.
+     The hiding class is added here, so the elements can only be hidden if the
+     observer that reveals them exists and is running. -->
 <script>
-  AOS.init({
-    once: true,
-    duration: 600,
-    offset: 60,
-    easing: 'ease-out-cubic',
-    disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  });
+  (function () {
+    var els = document.querySelectorAll('[data-reveal]');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var io, ioFired = false;
+
+    function revealAll() {
+      if (io) io.disconnect();
+      for (var i = 0; i < els.length; i++) {
+        els[i].style.transitionDelay = '0ms';
+        els[i].classList.add('revealed');
+      }
+    }
+
+    function start() {
+      document.documentElement.classList.add('reveal-on');
+
+      io = new IntersectionObserver(function (entries) {
+        ioFired = true;
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('revealed');
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -60px 0px', threshold: 0 });
+
+      for (var i = 0; i < els.length; i++) {
+        var d = els[i].getAttribute('data-reveal-delay');
+        if (d) els[i].style.transitionDelay = d + 'ms';
+        io.observe(els[i]);
+      }
+
+      // An observer reports on every element it is given as soon as it starts,
+      // so ioFired is true within a frame anywhere this actually works. If it
+      // is still false, nothing will ever reveal these elements: drop the
+      // animation and show the page. Losing a fade beats showing a blank page.
+      setTimeout(function () { if (!ioFired) revealAll(); }, 1000);
+    }
+
+    // The rule this all rests on: never leave content hidden in a document we
+    // cannot observe. A hidden document fires no observers, so anything still
+    // faded out at that point would be stranded there for good.
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') revealAll();
+    });
+
+    if (document.visibilityState === 'hidden') {
+      document.addEventListener('visibilitychange', function onShow() {
+        if (document.visibilityState !== 'visible') return;
+        document.removeEventListener('visibilitychange', onShow);
+        start();
+      });
+      return;
+    }
+    start();
+  })();
 </script>
 
 <!-- Visitor analytics (GoatCounter — free, no cookies, GDPR-friendly).
