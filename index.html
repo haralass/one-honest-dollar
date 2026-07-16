@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>One Honest Dollar — get from zero to your first dollar online</title>
-<meta name="description" content="Not a course. Not a get-rich scheme. A specific, small, achievable first step to your first dollar online — validated before you build anything.">
+<meta name="description" content="Not a course. Not a get-rich scheme. A short, specific playbook for making your first real sale online. €17 — instant download.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="One Honest Dollar — get from zero to your first real sale">
-<meta property="og:description" content="Not a course. Not a get-rich scheme. A short, honest playbook built from 3,170 real posts. €17 at launch — join the waitlist.">
+<meta property="og:description" content="Not a course. Not a get-rich scheme. A short, honest playbook for your first real sale online. €17.">
 <meta property="og:url" content="https://haralass.github.io/one-honest-dollar/">
 <meta property="og:image" content="https://haralass.github.io/one-honest-dollar/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -566,6 +566,53 @@
     font-size: 0.85rem;
     color: var(--ink-faint);
   }
+
+  /* ---------- Buy button + get-list ---------- */
+  .get-list {
+    list-style: none;
+    text-align: left;
+    max-width: 420px;
+    margin: 0 auto 28px;
+    display: grid;
+    gap: 10px;
+  }
+  .get-list li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 0.96rem;
+    color: var(--ink-soft);
+  }
+  .get-list li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 3px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--green-tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23047857' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat;
+  }
+  .get-list li strong { color: var(--green-deeper); }
+  .buy-btn {
+    display: inline-block;
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    padding: 17px 44px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #059669, var(--green-deep));
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(15,23,42,.1), 0 12px 28px -6px rgba(5,150,105,.5), inset 0 1px 0 rgba(255,255,255,.18);
+    transition: filter .15s, transform .1s;
+  }
+  .buy-btn:hover { filter: brightness(1.07); }
+  .buy-btn:active { transform: scale(.98); }
+  .sample-link {
+    margin-top: 18px;
+    font-size: 0.92rem;
+  }
+  .sample-link a { color: var(--green-deep); font-weight: 600; text-decoration: none; }
+  .sample-link a:hover { text-decoration: underline; }
+
   .signup-done {
     display: none;
     background: var(--green-tint);
@@ -712,7 +759,7 @@
       </svg>
       <span>One <em>Honest</em> Dollar</span>
     </a>
-    <a class="header-cta" href="#cta-h">Notify me</a>
+    <a class="header-cta" href="#cta-h">Get it &mdash; &euro;17</a>
   </div>
 </header>
 
@@ -720,9 +767,9 @@
   <!-- Hero -->
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap">
-      <span class="badge"><span class="pulse" aria-hidden="true"></span>In progress &mdash; built in public</span>
+      <span class="badge"><span class="pulse" aria-hidden="true"></span>New &middot; 2026 edition</span>
       <h1 id="hero-h">Get from <span class="accent">zero</span> to one honest dollar</h1>
-      <p class="sub">Not a course. Not a get-rich scheme. A short, specific playbook for getting your first real sale online &mdash; validated before you build anything.</p>
+      <p class="sub">You've bought the courses. You're still at zero. This is the short, honest playbook that gets you to one real sale &mdash; the part every other product skipped.</p>
 
       <div class="scene-card" id="scene-card" role="img" aria-label="Animated 3D illustration: a friendly robot watching a green numeral flip between zero and one, giving a thumbs up when it lands on one.">
         <div class="scene-fallback" aria-hidden="true">
@@ -755,7 +802,7 @@
           <blockquote>Getting from 0 to 1 sale is what matters most &mdash; I just want to clear that psychological hurdle of making my very first dollar.</blockquote>
         </div>
       </div>
-      <p class="quotes-caption" data-aos="fade-up">These aren't made up &mdash; they're from the 3,170 real posts we analyzed before writing a single page. If this is you too, you're exactly who this is for.</p>
+      <p class="quotes-caption" data-aos="fade-up">These aren't made up. They're the exact words of people who were stuck where you are. If this is you too, you're exactly who this is for.</p>
     </div>
   </section>
 
@@ -806,7 +853,7 @@
       <div class="section-head" data-aos="fade-up">
         <span class="eyebrow">The plan</span>
         <h2 class="section-h" id="inside-h">What's inside</h2>
-        <p class="section-sub">No filler, no mindset fluff. Just the parts that get you to one real sale.</p>
+        <p class="section-sub">No filler. No mindset fluff. Only the moves that end at one real sale.</p>
       </div>
       <div class="inside">
         <div class="inside-item" data-aos="fade-up" data-aos-delay="0">
@@ -849,8 +896,8 @@
     </div>
   </section>
 
-  <!-- Guide preview -->
-  <section class="preview-section" aria-labelledby="preview-h">
+  <!-- Guide preview / free sample -->
+  <section class="preview-section" id="sample" aria-labelledby="preview-h">
     <div class="wrap">
       <div class="preview-grid">
         <div class="book" data-aos="fade-up" aria-hidden="true">
@@ -864,20 +911,22 @@
             <h4>From zero to your first real sale</h4>
             <div class="toc">
               <span><b>01</b> The test that saves you months</span>
-              <span><b>02</b> Why your last 10 tries paid nothing</span>
+              <span><b>02</b> Why your last ten tries paid nothing</span>
               <span><b>03</b> Finding ten real buyers</span>
-              <span><b>04</b> The tiny ask</span>
-              <span><b>05</b> The day of the first dollar</span>
-              <span class="soon"><b>+</b> worksheets &mdash; being finalized</span>
+              <span><b>04</b> You should be skeptical</span>
+              <span><b>05</b> The ask &mdash; the three ways it happens</span>
+              <span><b>06</b> The silence</span>
+              <span><b>07</b> The day of the first dollar</span>
+              <span class="soon"><b>+</b> 7 worksheets &amp; a 30-day tracker</span>
             </div>
           </div>
         </div>
         <div class="preview-copy" data-aos="fade-up">
-          <span class="eyebrow">What you're buying</span>
-          <h2 id="preview-h">Short. Specific. Finished in an evening.</h2>
-          <p>This is the working table of contents &mdash; shown before launch on purpose, so you can judge it before spending anything.</p>
-          <p>Every chapter ends in an action you can do the same day, and none of them requires an audience, a budget, or prior wins.</p>
-          <p class="fine">Contents may shift slightly before launch &mdash; it's being written in public. What won't shift: the goal stays one real sale, not vague motivation.</p>
+          <span class="eyebrow">Look inside</span>
+          <h2 id="preview-h">See exactly what you're getting.</h2>
+          <p>The whole table of contents is right here &mdash; no mystery, no "secret system." Seven short chapters and the worksheets that turn them into a sent message and a filled page.</p>
+          <p>Every chapter ends in one concrete action, most of them under an hour. None of it needs an audience, a budget, or a single prior win.</p>
+          <p class="fine">Want to read before you buy? The opening chapters are free &mdash; ask and I'll send them. You should judge it before you trust it. That's the whole point of the book.</p>
         </div>
       </div>
     </div>
@@ -889,8 +938,8 @@
       <div class="note-card" data-aos="fade-up">
         <span class="note-label">Why this exists</span>
         <p>I've been on the buying side of too many "make money online" products. Big promises up front, recycled advice inside, and you end up exactly where you started &mdash; minus the price of the course.</p>
-        <p>So before writing a word, I pulled 3,170 real posts from people stuck at zero &mdash; and from people who finally made their first sale &mdash; to find what actually separates them.</p>
-        <p>Now I'm making the thing I wish I'd bought first: the shortest honest path from nothing to one real sale. Small on purpose. Priced like a book, not a bootcamp. And built in public, so you can watch it take shape before you spend a cent.</p>
+        <p>So I went and read the real stories &mdash; hundreds of people who stayed at zero, and hundreds who finally made that first sale &mdash; to find what actually separates them.</p>
+        <p>What came out of it is the thing I wish I'd bought first: the shortest honest path from nothing to one real sale. Small on purpose. Priced like a book, not a bootcamp. And still being improved in the open &mdash; buy it once, and every future version is yours, free.</p>
       </div>
     </div>
   </section>
@@ -899,16 +948,21 @@
   <section class="cta-section" aria-labelledby="cta-h">
     <div class="wrap">
       <div class="cta-card" data-aos="fade-up">
-        <span class="price-tag"><span class="amount">&euro;17</span><span class="note">one-time, when it launches</span></span>
-        <h2 id="cta-h">Get notified when it's ready</h2>
-        <p class="cta-sub">Leave your email and you'll hear from me exactly once &mdash; on launch day. You decide then, with the full contents in front of you.</p>
-        <form class="signup" id="signup-form" novalidate>
-          <label class="sr-only" for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-          <button type="submit">Notify me</button>
-        </form>
-        <p class="signup-done" id="signup-done" role="status" aria-live="polite">Thanks. You're on the list &mdash; one email, when it launches.</p>
-        <p class="reassure" id="reassure">No spam. One email, when it launches.</p>
+        <span class="price-tag"><span class="amount">&euro;17</span><span class="note">one-time &middot; instant download</span></span>
+        <h2 id="cta-h">Get One Honest Dollar</h2>
+        <p class="cta-sub">The whole method: seven short chapters and the worksheets that turn them into sent messages &mdash; and a first sale.</p>
+
+        <ul class="get-list" aria-label="What you get">
+          <li>The whole method in ~40 pages. Read it tonight, start tomorrow.</li>
+          <li>7 worksheets and a 30-day tracker that do the deciding for you.</li>
+          <li>On your phone or printed &mdash; however you actually work.</li>
+          <li><strong>Buy once. Every future edition shows up free.</strong></li>
+        </ul>
+
+        <!-- TODO: replace href with your Gumroad / Lemon Squeezy checkout link -->
+        <a class="buy-btn" id="cta-buy" href="#" data-checkout>Buy it &mdash; &euro;17</a>
+        <p class="reassure">Secure checkout &middot; instant access &middot; no account needed</p>
+        <p class="sample-link"><a href="#sample">Not sure? See exactly what&rsquo;s inside &darr;</a></p>
       </div>
     </div>
   </section>
@@ -931,19 +985,31 @@
           <summary>Will I make a lot of money?
             <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
           </summary>
-          <p>Honestly &mdash; probably not from this alone. The goal is one real sale: proof that a stranger will pay you. In the 90+ real first-sale stories we analyzed, that typically took 10 days to 4 months &mdash; not an afternoon. Anyone promising faster is selling you something.</p>
+          <p>Honestly &mdash; probably not from this alone. The goal is one real sale: proof that a stranger will pay you. For most people that takes weeks, not an afternoon &mdash; and anyone promising faster is selling you the fantasy that kept you at zero.</p>
         </details>
         <details>
           <summary>Why &euro;17?
             <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
           </summary>
-          <p>Cheap enough that it doesn't need hype to justify itself. Expensive enough that you'll actually do the steps. And you'll see exactly what's inside before paying &mdash; that's what the launch email is for.</p>
+          <p>Cheap enough that it doesn't need hype to justify itself &mdash; less than an hour of a tutor. Expensive enough that you'll actually do the steps. And the whole table of contents is on this page, so you know what you're getting before you pay.</p>
         </details>
         <details>
-          <summary>Why give my email now?
+          <summary>How do I get it after paying?
             <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
           </summary>
-          <p>Because I'm only building this if enough people want it. Your email is a vote. One email at launch, nothing else, unsubscribe does what it says.</p>
+          <p>Instantly. Checkout takes a card, and the PDF downloads right after &mdash; no account, no waiting. It reads on your phone and prints if you'd rather work on paper.</p>
+        </details>
+        <details>
+          <summary>Is the payment safe?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <p>Yes. Checkout runs on an established payment processor, not on this page &mdash; your card details never touch my site, and I never see them.</p>
+        </details>
+        <details>
+          <summary>Who is this NOT for?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <p>Anyone looking for passive income, big numbers, or a shortcut. This is a small, specific method for making one real sale, by hand, over a few weeks. If that sounds too modest, it honestly isn't for you &mdash; and I'd rather say so than take your &euro;17.</p>
         </details>
       </div>
     </div>
@@ -979,40 +1045,15 @@
 </script>
 
 <script>
-  // Email capture via FormSubmit (free, no account) — signups arrive at the
-  // owner's inbox. First-ever submission triggers a one-time activation email.
-  document.getElementById('signup-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var form = this;
-    var input = document.getElementById('email');
-    var button = form.querySelector('button');
-    var email = input.value.trim();
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      input.focus();
-      input.setAttribute('aria-invalid', 'true');
-      return;
-    }
-    button.disabled = true;
-    button.textContent = 'One sec…';
-    fetch('https://formsubmit.co/ajax/haralas@icloud.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        email: email,
-        _subject: 'One Honest Dollar — waitlist signup',
-        _template: 'table',
-        _captcha: 'false'
-      })
-    }).then(function (r) {
-      if (!r.ok) throw new Error('status ' + r.status);
-      form.style.display = 'none';
-      document.getElementById('reassure').style.display = 'none';
-      document.getElementById('signup-done').style.display = 'block';
-    }).catch(function (err) {
-      console.error('signup failed:', err);
-      button.disabled = false;
-      button.textContent = 'Notify me';
-      document.getElementById('reassure').textContent = "That didn't go through — mind trying once more?";
+  // Buy button. Until the checkout link is set, guard against an empty '#' href
+  // so a click doesn't silently do nothing (which reads as "broken" to a buyer).
+  document.querySelectorAll('[data-checkout]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var url = el.getAttribute('href');
+      if (!url || url === '#') {
+        e.preventDefault();
+        alert('Checkout link not connected yet. Add your Gumroad / Lemon Squeezy URL to the "data-checkout" buttons.');
+      }
     });
   });
 </script>
@@ -1092,13 +1133,18 @@
     const glyphMat = new THREE.MeshStandardMaterial({ color: 0x10B981, roughness: 0.28, metalness: 0.1 });
 
     function makeZero() {
+      // Start the outline at the bottom (-90deg) so the unavoidable extrude
+      // seam sits under the numeral, hidden by the rim and shadow, instead of
+      // running across the middle-right where it read as a crack.
+      const S = -Math.PI / 2, E = S + Math.PI * 2;
       const shape = new THREE.Shape();
-      shape.absellipse(0, 0, 0.58, 0.88, 0, Math.PI * 2, false, 0);
+      shape.absellipse(0, 0, 0.58, 0.88, S, E, false, 0);
       const hole = new THREE.Path();
-      hole.absellipse(0, 0, 0.29, 0.57, 0, Math.PI * 2, true, 0);
+      hole.absellipse(0, 0, 0.29, 0.57, S, E, true, 0);
       shape.holes.push(hole);
       const geo = new THREE.ExtrudeGeometry(shape, EXTRUDE);
       geo.center();
+      geo.computeVertexNormals();
       return new THREE.Mesh(geo, glyphMat);
     }
 
@@ -1253,8 +1299,8 @@
 </script>
 
 <!-- Visitor analytics (GoatCounter — free, no cookies, GDPR-friendly).
-     ACTIVATION: sign up at https://www.goatcounter.com with the code "zerotoone";
-     stats will then appear at https://zerotoone.goatcounter.com.
+     ACTIVATION: sign up at https://www.goatcounter.com with the code "onehonestdollar";
+     stats will then appear at https://onehonestdollar.goatcounter.com.
      Until the account exists this script does nothing. -->
 <script data-goatcounter="https://onehonestdollar.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
